@@ -12,14 +12,6 @@ namespace ByteBank.SistemaAgencia
 
         public ExtratorValorDeArgumentosURL(string url)
         {
-
-            
-
-
-
-
-
-
             if (url == null)
             {
                 throw new ArgumentNullException(nameof(url));
