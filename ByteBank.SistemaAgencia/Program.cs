@@ -12,11 +12,6 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            // pagina?argumentos
-            // 012345678
-
-
-
             string textoVazio = "";
             string textoNulo = null;
             string textoQualquer = "kjhfsdjhgsdfjksdf";
@@ -26,9 +21,6 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(String.IsNullOrEmpty(textoNulo));
             Console.WriteLine(String.IsNullOrEmpty(textoQualquer));
             Console.ReadLine();
-
-
-
 
 
 
