@@ -17,7 +17,7 @@ namespace ByteBank.SistemaAgencia
                 throw new ArgumentNullException(nameof(url));
             }
 
-            if(url == "")
+            if (url == "")
             {
                 throw new ArgumentException("O argumento url não pode ser uma string vazia.", nameof(url));
             }
