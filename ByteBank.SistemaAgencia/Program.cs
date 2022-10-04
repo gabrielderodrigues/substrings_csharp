@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
@@ -12,13 +13,31 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            string urlTeste = "https://www.bytebank.com/cambio";
-            int indiceByteBank = urlTeste.IndexOf("https://www.bytebank.com");
+            //string urlTeste = "https://www.bytebank.com/cambio";
+            //int indiceByteBank = urlTeste.IndexOf("https://www.bytebank.com");
 
-            Console.WriteLine(urlTeste.StartsWith("https://www.bytebank.com"));
-            Console.WriteLine(urlTeste.EndsWith("cambio"));
+            //Console.WriteLine(urlTeste.StartsWith("https://www.bytebank.com"));
+            //Console.WriteLine(urlTeste.EndsWith("cambio"));
 
-            Console.WriteLine(urlTeste.Contains("bytebank"));
+            //Console.WriteLine(urlTeste.Contains("bytebank"));
+
+            //string endereco = "R. São Carlos do Pinhal nº746";
+            //string enderecoFormatado =
+            //    endereco
+            //        .ToUpper()
+            //        .Replace("r.", "Rua")
+            //        .Replace(" nº", ", Número ")
+            //        .ToUpper();
+
+            //Console.WriteLine(enderecoFormatado);
+
+            //Console.ReadLine();
+
+            string padrao = "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+            string textoDeTeste = "Meu nome é Gabriel, me ligue em 1456-7854";
+
+            Match resultado = Regex.Match(textoDeTeste, padrao);
+            Console.WriteLine(resultado.Value);
 
             Console.ReadLine();
 
